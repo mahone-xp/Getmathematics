@@ -9,4 +9,4 @@ Get Some Mathematics with  the .bat file.
 
 文件目录下会生成math.txt文件
 
-打印给小朋友们吧
+打印给小朋友们吧!!

@@ -12,7 +12,7 @@ echo.
 set /p TaskRange=请输入题目结果最大值：
 cls
 echo 请稍等，%QuestQTY%道%TaskRange%以内加减法正在生成中……
-REM 启用延迟环境变量扩展
+REM 启用延迟环境变量扩展 一直不知道为什么要加上这个才行
 setlocal enabledelayedexpansion
 rem 归零计数器
 set /a CreateNum=0
@@ -22,9 +22,11 @@ echo %TaskRange%以内加减法%QuestQTY%道 >math.txt
 :CreateMath
 set /a MSymbol=!random!%%2
 if %CreateNum% LSS %QuestQTY% (
-set /a CreateNum=CreateNum+1
+set /a CreateNum=CreateNum+1    
+REM CreateNum+1 记录增加了一次计算
 if %MSymbol% == 1 (
 set /a PlusNum=PlusNum+1
+rem 判断 MSymbol 的值，若为 “1” 则生成加法算式
 goto :PlusCal ) else (
 set /a MinusNum=MinusNum+1
 goto :MinusCal)) else (

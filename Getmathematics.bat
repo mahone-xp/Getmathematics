@@ -1,4 +1,5 @@
 @ECHO OFF
+chcp 65001
 mode con cols=49 lines=10
 color 0A
 cls
@@ -12,7 +13,8 @@ echo.
 set /p TaskRange=请输入题目结果最大值：
 cls
 echo 请稍等，%QuestQTY%道%TaskRange%以内加减法正在生成中……
-REM 启用延迟环境变量扩展 一直不知道为什么要加上这个才行
+REM 启用延迟环境变量扩展
+REM 一直不知道为什么要加上这个才行
 setlocal enabledelayedexpansion
 rem 归零计数器
 set /a CreateNum=0

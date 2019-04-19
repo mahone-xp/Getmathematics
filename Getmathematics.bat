@@ -1,5 +1,6 @@
 @ECHO OFF
 chcp 65001
+REM chcp 65001 强制转换为utf-8编码格式显示
 mode con cols=49 lines=10
 color 0A
 cls
